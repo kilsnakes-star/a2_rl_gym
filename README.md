@@ -78,7 +78,7 @@ python legged_gym/scripts/play.py --task=a2_h042_moe_cts_reward_norm --num_envs=
 
 This project builds on the Isaac Gym locomotion ecosystem, including `legged_gym`, `rsl_rl`, and Unitree reinforcement learning examples.
 
-This project is adapted from go2-rl-gym / unitree_rl_gym and modified for Unitree A2 training in Isaac Gym. We thank the original authors and retain the corresponding license notices.
+This project is adapted from go2_rl_gym / unitree_rl_gym and modified for Unitree A2 training in Isaac Gym. We thank the original authors and retain the corresponding license notices.
 
 ## License
 
