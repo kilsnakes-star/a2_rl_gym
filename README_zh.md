@@ -10,11 +10,7 @@ Unitree A2 的 Isaac Gym 强化学习训练环境。
 
 ## 可用任务
 
-- `a2`：A2 基础速度跟踪任务。
-- `a2_h046_pose`：使用更高初始姿态/高度设置的 A2 任务。
-- `a2_h046_only`：使用更高机身高度目标的 A2 任务。
-- `a2_h042_moe_cts`：A2 MoE-CTS 训练任务。
-- `a2_h042_moe_cts_reward_norm`：带奖励归一化诊断的 A2 MoE-CTS 任务。
+- `a2_h042_moe_cts_reward_norm`：正式发布的 A2 MoE-CTS 训练任务，带奖励归一化诊断。
 
 A2 机器人资产路径：
 
@@ -32,16 +28,10 @@ python legged_gym/scripts/check_a2.py --headless --num_envs=16
 
 ## 训练
 
-训练基础 A2 任务：
+训练正式 A2 任务：
 
 ```bash
-python legged_gym/scripts/train.py --task=a2 --headless
-```
-
-训练 A2 MoE-CTS 任务：
-
-```bash
-python legged_gym/scripts/train.py --task=a2_h042_moe_cts --headless
+python legged_gym/scripts/train.py --task=a2_h042_moe_cts_reward_norm --headless
 ```
 
 常用参数：
@@ -66,13 +56,13 @@ logs/<experiment_name>/<date_time>_<run_name>/
 使用 A2 专用播放脚本：
 
 ```bash
-python legged_gym/scripts/play_a2.py --task=a2 --num_envs=1
+python legged_gym/scripts/play_a2.py --task=a2_h042_moe_cts_reward_norm --num_envs=1
 ```
 
 也可以使用通用播放脚本：
 
 ```bash
-python legged_gym/scripts/play.py --task=a2 --num_envs=1
+python legged_gym/scripts/play.py --task=a2_h042_moe_cts_reward_norm --num_envs=1
 ```
 
 ## 仓库结构

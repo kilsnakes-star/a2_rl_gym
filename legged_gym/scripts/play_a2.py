@@ -23,7 +23,9 @@ from legged_gym.utils import get_args, task_registry
 
 def _parse_args():
     parser = argparse.ArgumentParser(add_help=False)
-    parser.add_argument("--task", type=str, default="a2")
+    parser.add_argument(
+        "--task", type=str, default="a2_h042_moe_cts_reward_norm"
+    )
     parser.add_argument("--sim_device", type=str, default="cuda:0")
     parser.add_argument("--rl_device", type=str, default="cuda:0")
     parser.add_argument("--graphics_device_id", type=int, default=0)

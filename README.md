@@ -8,13 +8,9 @@ This repository contains the A2 task definitions, robot asset, training scripts,
 
 Follow the setup guide in [doc/setup_en.md](doc/setup_en.md).
 
-## Available Tasks
+## Available Task
 
-- `a2`: baseline A2 velocity tracking task.
-- `a2_h046_pose`: A2 task with a higher initial/base-height pose.
-- `a2_h046_only`: A2 task with a higher base-height target.
-- `a2_h042_moe_cts`: A2 MoE-CTS training task.
-- `a2_h042_moe_cts_reward_norm`: A2 MoE-CTS task with reward normalization diagnostics.
+- `a2_h042_moe_cts_reward_norm`: the official A2 MoE-CTS training task with reward normalization diagnostics.
 
 The A2 robot asset is loaded from:
 
@@ -32,16 +28,10 @@ python legged_gym/scripts/check_a2.py --headless --num_envs=16
 
 ## Training
 
-Train the baseline A2 task:
+Train the official A2 task:
 
 ```bash
-python legged_gym/scripts/train.py --task=a2 --headless
-```
-
-Train the A2 MoE-CTS task:
-
-```bash
-python legged_gym/scripts/train.py --task=a2_h042_moe_cts --headless
+python legged_gym/scripts/train.py --task=a2_h042_moe_cts_reward_norm --headless
 ```
 
 Common arguments:
@@ -66,13 +56,13 @@ logs/<experiment_name>/<date_time>_<run_name>/
 Play an A2 checkpoint with the A2-specific playback helper:
 
 ```bash
-python legged_gym/scripts/play_a2.py --task=a2 --num_envs=1
+python legged_gym/scripts/play_a2.py --task=a2_h042_moe_cts_reward_norm --num_envs=1
 ```
 
 For the generic playback script:
 
 ```bash
-python legged_gym/scripts/play.py --task=a2 --num_envs=1
+python legged_gym/scripts/play.py --task=a2_h042_moe_cts_reward_norm --num_envs=1
 ```
 
 ## Repository Layout

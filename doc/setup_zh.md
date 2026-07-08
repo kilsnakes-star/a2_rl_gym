@@ -33,17 +33,11 @@ python legged_gym/scripts/check_a2.py --headless --num_envs=16
 ## 4. 训练
 
 ```bash
-python legged_gym/scripts/train.py --task=a2 --headless
-```
-
-训练 MoE-CTS 任务：
-
-```bash
-python legged_gym/scripts/train.py --task=a2_h042_moe_cts --headless
+python legged_gym/scripts/train.py --task=a2_h042_moe_cts_reward_norm --headless
 ```
 
 ## 5. 播放
 
 ```bash
-python legged_gym/scripts/play_a2.py --task=a2 --num_envs=1
+python legged_gym/scripts/play_a2.py --task=a2_h042_moe_cts_reward_norm --num_envs=1
 ```

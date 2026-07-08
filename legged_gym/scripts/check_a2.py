@@ -109,7 +109,7 @@ def _create_camera(env, width, height):
 
 
 def check_a2(args):
-    args.task = "a2"
+    args.task = "a2_h042_moe_cts_reward_norm"
     env_cfg, _ = task_registry.get_cfgs(name=args.task)
     env_cfg.env.num_envs = args.num_envs or 16
     env_cfg.env.enable_camera_sensors = args.record_mp4
